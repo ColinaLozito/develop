@@ -48,6 +48,7 @@ And now the project is redy to go.
 ### Option 2 (Automatic).
 - In the folder root execute the _install.bat_ file.
 And It's DONE!!.
+
 **NOTE:** to make this method work, its necesary to leave the original name folder. 
 
 
