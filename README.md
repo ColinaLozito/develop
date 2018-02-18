@@ -25,28 +25,30 @@ The data used to register the user is the following:
 ## Instructions:
 To make this´project work there is 2 options.
 
-** Required: **
+**Required:**
 - Have composer installed
 - Have any platform server (XAMPP or WAMP).
 - Put the project folder under the Localhost route.
 
-** Pre-required **
+**Pre-required**
 - Before to install the aplication you need to open the *config.php* and set up your DATABASE values. 
 
 
 ### Option 1 (Manual).
 - In the folder root run the next commdan to install all dependencies:
-	composer install
+	> composer install
 - Then run the nex command to create the autoload dependencies:
-	composer dump-autoload
+	> composer dump-autoload
 - Then get in to the _/migrations_ folder and run the next command to create the database and create the table:
-	php migration.php
+	> php migration.php
+- Open your localhost/project-folder-name url.
 
 And now the project is redy to go.
 
 ### Option 2 (Automatic).
 - In the folder root execute the _install.bat_ file.
 And It's DONE!!.
+**NOTE:** to make this method work, its necesary to leave the original name folder. 
 
 
 ## NOTE:
