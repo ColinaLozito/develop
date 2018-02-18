@@ -2,28 +2,35 @@
 
 namespace App\Controllers;
 
-require_once('./core/View.php');
-// require_once('./core/url.php');
+use App\Controllers\LoginController;
+use App\Controllers\ViewController;	
 
 	class IndexController
 	{		
 		public static function index()
 		{
-			// $url = url(); //path to the form method
+			$session = LoginController::get_session();
 
-			$view = new view('Login');
+			if (!empty($session)) {
+				header("Location: ".URL."users_list");
+			}
+
+			$view = new ViewController('Login');
     		// $view->assign();
 		}
 		public static function register()
 		{
-			// $url = url(); //path to the form method
+			$session = LoginController::get_session();
 
-			$view = new view('Register');
+			if (!empty($session)) {
+				header("Location: ".URL."users_list");
+			}
+
+			$view = new ViewController('Register');
     		// $view->assign();
 		}
-		public static function get()
-		{
-			// $view = new view('index');
-    		// $view->assign('','');
+
+		public static function _404(){
+			$view = new ViewController('404');
 		}
 	}
