@@ -1,3 +1,6 @@
+<?php 
+require'menu2.php';
+ ?>
 <h2>User Edit Form</h2>
 
 <div class="register-form-box">
@@ -12,7 +15,7 @@
 			<label>Country: </label>			
 			<select name="country">
 					<option>-- select --</option>
-				<?php foreach (COUNTRIES as $country => $value): ?>
+				<?php foreach ($view_variables->countries as $country => $value): ?>
 					<option value="<?php echo $country ?>" <?php if($country == $user->country){echo "selected";} ?> > <?php echo $value; ?> </option>
 				<?php endforeach ?>
 			</select>

@@ -42,11 +42,13 @@
 	    -webkit-border-radius: 5px;
 	    border-radius: 5px; 
 	}
+	
 
   </style>
 <body>
+
 	<?php 
-		require 'menu.php';
+		// require 'menu.php';
 	 ?>
 </body>
 </html>

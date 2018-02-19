@@ -1,8 +1,11 @@
+<?php 
+require'menu1.php';
+ ?>
 <h1>Login</h1>
-<form>
+<form action="<?php echo URL."login"; ?>" method="post">
 	<div>
-		<label>User name</label>
-		<input type="text" name="username">
+		<label>User Email</label>
+		<input type="text" name="email">
 	</div>
 	<div>
 		<label>Password</label>

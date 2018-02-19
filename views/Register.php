@@ -1,3 +1,6 @@
+<?php 
+require'menu1.php';
+ ?>
 <div class="user-form">
 	
 	<form action="<?php echo URL."create_user"; ?>" method="post">

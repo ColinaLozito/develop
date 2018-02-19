@@ -14,14 +14,11 @@ class LoginController {
 
 	public static function login(){
 		
-
-
 		$email = $_REQUEST['email'];
 		$password = $_REQUEST['password'];
 		$password = base64_encode($password);
 
 		$user = User::where('email', $email)->where('password', $password)->first();
-
 
 		$session = SessionFactory::newInstance($_COOKIE);
 		$segment = $session->getSegment('Aura\Session\SessionFactory');
@@ -32,13 +29,6 @@ class LoginController {
 		}else{
 			header("Location:".URL);
 		}
-		// dd($segment->get('user')->email);
-
-		// // session_start();
-
-		// $_SESSION['user'] = $user;
-
-
 	}
 
 	public static function get_session(){
@@ -58,18 +48,13 @@ class LoginController {
 		}else{
 			header("Location:".URL);
 		}
-
 	}
 
 	public static function logout(){
 
 		$session = SessionFactory::newInstance($_COOKIE);
 		$session->destroy();
-		// session_start();
-		// session_destroy();
-		header('Location: '.URL);
-		// // dd($_SESSION['user']);
-		
+		header('Location: '.URL);		
 	}
 
 }

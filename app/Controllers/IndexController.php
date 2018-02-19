@@ -16,7 +16,7 @@ use App\Controllers\ViewController;
 			}
 
 			$view = new ViewController('Login');
-    		// $view->assign();
+
 		}
 		public static function register()
 		{
@@ -27,7 +27,7 @@ use App\Controllers\ViewController;
 			}
 
 			$view = new ViewController('Register');
-    		// $view->assign();
+
 		}
 
 		public static function _404(){

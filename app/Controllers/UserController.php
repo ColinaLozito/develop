@@ -12,8 +12,6 @@ use Aura\Session\SessionFactory;
 
 new Database();
 
-//Initialize Illuminate Database Connection
-
 	class UserController extends Database {
 
 	    public static function create_user(){
@@ -51,10 +49,8 @@ new Database();
 	    		}
 
         	$user = User::create(['username'=>$username,'country'=>$country,'email'=>$email,'password'=>$password]);
-        	// return $user;
         	header("Location:".URL."users_list");
-		        	
-			// }
+
 	  	}
 
 
@@ -76,8 +72,7 @@ new Database();
 	  	}
 
 	  	public static function edit_user($id){
-	  		
-	  		// $user = User::where('id', $id)->where('email', $_POST['email'])->save();
+
 	  		$session = LoginController::session_status();
 
 	  		$user= User::where([['id', $id],['email', $_REQUEST['email']]])

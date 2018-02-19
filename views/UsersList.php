@@ -1,3 +1,6 @@
+<?php 
+require 'menu2.php';
+ ?>
 <h2>USERS LIST</h2>
 <?php 
 require 'search.php';
